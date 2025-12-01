@@ -32,7 +32,8 @@
         /* Responsive image aspect ratio: Reduced height for better mobile visibility of the section below */
         .salon-image-container {
             width: 100%;
-            padding-top: 75%; /* 4:3 Aspect Ratio on mobile to save vertical space */
+            /* Decreased from 75% to 60% for a shorter hero section on mobile */
+            padding-top: 60%; 
             position: relative;
             /* Added transition for hover effect */
             transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -71,7 +72,7 @@
     <header class="bg-white shadow-md sticky top-0 z-10">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <!-- H1 using the new stylist font -->
-            <h1 class="font-stylist text-2xl font-bold text-pink-600 tracking-tight">Nini's Services</h1>
+            <h1 class="font-stylist text-2xl font-bold text-pink-600 tracking-tight">Nini's Service</h1>
             <nav>
                 <a href="#tax-services" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition duration-150">Tax Services</a>
             </nav>
@@ -79,8 +80,8 @@
     </header>
 
     <!-- 1. HERO SECTION: Salon Business -->
-    <!-- Reduced vertical padding (py-8) to make the section shorter on mobile -->
-    <section id="salon-hero" class="py-8 md:py-16 bg-pink-50 text-gray-800">
+    <!-- Reduced vertical padding (py-6 instead of py-8) to make the section shorter on mobile -->
+    <section id="salon-hero" class="py-6 md:py-16 bg-pink-50 text-gray-800">
         <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             
             <!-- Text Content -->
@@ -95,7 +96,8 @@
                 </p>
 
                 <!-- Payment Links -->
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style="animation-delay: 0.5s;">
+                <!-- UPDATED: Removed sm:flex-row and related sm: spacing classes to keep the links in a column on ALL screens. -->
+                <div class="flex flex-col justify-center md:justify-start space-y-4 animate-fade-in" style="animation-delay: 0.5s;">
                     <a href="https://cash.app/$YourCashTag" target="_blank" class="payment-link bg-green-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-green-600 flex items-center justify-center">
                         <!-- Simple icon/text for Cash App -->
                         <span class="text-xl mr-2">$</span> CashApp Me
