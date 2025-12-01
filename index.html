@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NiNi Professional</title>
+    <title>Nini Services</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -71,9 +71,9 @@
     <header class="bg-white shadow-md sticky top-0 z-10">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <!-- H1 using the new stylist font -->
-            <h1 class="font-stylist text-2xl font-bold text-pink-600 tracking-tight">NiNi Services</h1>
+            <h1 class="font-stylist text-2xl font-bold text-pink-600 tracking-tight">Nini's Services</h1>
             <nav>
-                <!-- <a href="#tax-services" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition duration-150">Tax Services</a> -->
+                <a href="#tax-services" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition duration-150">Tax Services</a>
             </nav>
         </div>
     </header>
@@ -86,9 +86,9 @@
             <!-- Text Content -->
             <div class="order-2 md:order-1 text-center md:text-left">
                 <p class="text-sm font-semibold text-pink-600 uppercase mb-2 animate-fade-in" style="animation-delay: 0s;">Owner & Stylist</p>
-                <!-- H2 using the new stylist font -->
-                <h2 class="font-stylist text-4xl sm:text-5xl font-extrabold leading-tight mb-4 animate-fade-in" style="animation-delay: 0.1s;">
-                    Welcome to NiNi Services!
+                <!-- H2 (Desktop Version): Visible only on medium screens and up -->
+                <h2 class="font-stylist text-4xl sm:text-5xl font-extrabold leading-tight mb-4 animate-fade-in hidden md:block" style="animation-delay: 0.1s;">
+                    Welcome to Nini Service!
                 </h2>
                 <p class="text-lg text-gray-600 mb-8 animate-fade-in" style="animation-delay: 0.3s;">
                     <!-- I'm [Owner's Name], dedicated to helping you look and feel your absolute best. Book your next appointment for cuts, color, and styling today! -->
@@ -117,6 +117,14 @@
             <!-- Image Container - Added hover:scale and hover:shadow -->
             <div class="order-1 md:order-2">
                 <div class="salon-image-container rounded-3xl overflow-hidden shadow-2xl bg-pink-100 relative hover:scale-[1.03] hover:shadow-2xl">
+                    
+                    <!-- H2 (Mobile Overlay Version): Visible only on mobile -->
+                    <div class="absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-40 md:hidden z-[5]">
+                         <h2 class="font-stylist text-2xl font-extrabold leading-tight text-white m-0 p-0 animate-fade-in" style="animation-delay: 0.1s;">
+                            Welcome to Nini's Services!
+                        </h2>
+                    </div>
+
                     <img 
                         src="nini.png" 
                         alt="Portrait of the female salon owner and business operator" 
