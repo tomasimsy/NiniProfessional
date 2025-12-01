@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiNi Professional</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a polished look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+
+        /* New class for the stylish headings */
+        .font-stylist {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Utility for payment icons/links */
+        .payment-link {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .payment-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive image aspect ratio: Reduced height for better mobile visibility of the section below */
+        .salon-image-container {
+            width: 100%;
+            padding-top: 75%; /* 4:3 Aspect Ratio on mobile to save vertical space */
+            position: relative;
+            /* Added transition for hover effect */
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        }
+
+        @media (min-width: 640px) {
+            .salon-image-container {
+                padding-top: 50%; /* Even shorter on desktop for a cleaner horizontal layout */
+            }
+        }
+        
+        /* New styles for interactive feature cards */
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px); /* Lift up */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+        }
+        
+        /* Keyframes for subtle entrance animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0; /* Start hidden */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- H1 using the new stylist font -->
+            <h1 class="font-stylist text-2xl font-bold text-pink-600 tracking-tight">NiNi Services</h1>
+            <nav>
+                <!-- <a href="#tax-services" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition duration-150">Tax Services</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION: Salon Business -->
+    <!-- Reduced vertical padding (py-8) to make the section shorter on mobile -->
+    <section id="salon-hero" class="py-8 md:py-16 bg-pink-50 text-gray-800">
+        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            
+            <!-- Text Content -->
+            <div class="order-2 md:order-1 text-center md:text-left">
+                <p class="text-sm font-semibold text-pink-600 uppercase mb-2 animate-fade-in" style="animation-delay: 0s;">Owner & Stylist</p>
+                <!-- H2 using the new stylist font -->
+                <h2 class="font-stylist text-4xl sm:text-5xl font-extrabold leading-tight mb-4 animate-fade-in" style="animation-delay: 0.1s;">
+                    Welcome to NiNi Services!
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 animate-fade-in" style="animation-delay: 0.3s;">
+                    <!-- I'm [Owner's Name], dedicated to helping you look and feel your absolute best. Book your next appointment for cuts, color, and styling today! -->
+                </p>
+
+                <!-- Payment Links -->
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style="animation-delay: 0.5s;">
+                    <a href="https://cash.app/$YourCashTag" target="_blank" class="payment-link bg-green-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-green-600 flex items-center justify-center">
+                        <!-- Simple icon/text for Cash App -->
+                        <span class="text-xl mr-2">$</span> CashApp Me
+                    </a>
+                    <a href="https://venmo.com/u/YourVenmoHandle" target="_blank" class="payment-link bg-blue-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-blue-600 flex items-center justify-center">
+                        <!-- Simple icon/text for Venmo -->
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-5-8a1 1 0 011-1h6a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                         Venmo Me
+                    </a>
+                    <a href="https://venmo.com/u/YourVenmoHandle" target="_blank" class="payment-link bg-red-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-red-700 flex items-center justify-center">
+                        <!-- Simple icon/text for Venmo -->
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-5-8a1 1 0 011-1h6a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        Nini Photography
+                    </a>
+                </div>
+                <p class="text-xs text-gray-500 mt-4 animate-fade-in" style="animation-delay: 0.7s;">Thank you for supporting small business!</p>
+            </div>
+
+            <!-- Image Container - Added hover:scale and hover:shadow -->
+            <div class="order-1 md:order-2">
+                <div class="salon-image-container rounded-3xl overflow-hidden shadow-2xl bg-pink-100 relative hover:scale-[1.03] hover:shadow-2xl">
+                    <img 
+                        src="nini.png" 
+                        alt="Portrait of the female salon owner and business operator" 
+                        class="absolute inset-0 w-full h-full object-cover animate-fade-in" style="animation-delay: 0.9s;"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/fecaca/9d174d?text=Owner+Photo';"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. TAX FILING SERVICES SECTION -->
+    <section id="tax-services" class="py-12 md:py-20 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <header class="text-center mb-10">
+                <h3 class="text-sm font-semibold uppercase text-blue-200 mb-2 animate-fade-in" style="animation-delay: 1.1s;">Additional Services</h3>
+                <!-- H2 using the new stylist font -->
+                <h2 class="font-stylist text-3xl sm:text-4xl font-extrabold tracking-tight animate-fade-in" style="animation-delay: 1.3s;">
+                    Professional Tax Filing Services
+                </h2>
+            </header>
+            
+            <!-- Mobile-Optimized Content Display -->
+            <div class="bg-white text-gray-800 p-6 rounded-2xl shadow-xl animate-fade-in" style="animation-delay: 1.5s;">
+                <p class="text-xl font-semibold text-blue-700 mb-4">
+                    Ready for a stress-free tax season?
+                </p>
+                <p class="text-gray-600 mb-6">
+                    Beyond the salon, I offer reliable, personalized tax preparation for individuals and small business owners. I handle the complexity so you can focus on what matters.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    
+                    <!-- Feature 1: Added feature-card class for lift/shadow hover -->
+                    <div class="feature-card p-4 bg-blue-50 rounded-xl border-t-4 border-blue-400">
+                        <svg class="w-6 h-6 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2h-2v5m0-5a3 3 0 013-3V6a3 3 0 00-3 3v2M4 12a8 8 0 1016 0 8 8 0 00-16 0z"></path></svg>
+                        <h4 class="font-bold text-lg mb-1">Individual Filings</h4>
+                        <p class="text-sm text-gray-500">W-2, 1099, deductions, and credits.</p>
+                    </div>
+
+                    <!-- Feature 2: Added feature-card class for lift/shadow hover -->
+                    <div class="feature-card p-4 bg-blue-50 rounded-xl border-t-4 border-blue-400">
+                        <svg class="w-6 h-6 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.565 23.565 0 0112 15c-3.185 0-6.223-.62-9-1.745M16 16v1a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1m4-10a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4z"></path></svg>
+                        <h4 class="font-bold text-lg mb-1">Small Business</h4>
+                        <p class="text-sm text-gray-500">Sole proprietors, LLCs, Schedule C expertise.</p>
+                    </div>
+
+                    <!-- Feature 3: Added feature-card class for lift/shadow hover -->
+                    <div class="feature-card p-4 bg-blue-50 rounded-xl border-t-4 border-blue-400">
+                        <svg class="w-6 h-6 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a12.004 12.004 0 00-8.525 3.659c1.93 1.096 3.996 1.776 6.132 1.956m0-4.048c1.332 0 2.64.53 3.593 1.517M12 12V3"></path></svg>
+                        <h4 class="font-bold text-lg mb-1">Audit Support</h4>
+                        <p class="text-sm text-gray-500">Peace of mind and ongoing tax guidance.</p>
+                    </div>
+
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="#" class="inline-block bg-blue-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-blue-800 transition duration-300">
+                        Request a Free Tax Consultation
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 text-center text-sm">
+        &copy; 2024 Glow & Grow Services. All rights reserved. | Contact: <a href="mailto:contact@glowandgrow.com" class="text-blue-300 hover:underline">contact@glowandgrow.com</a>
+    </footer>
+
+</body>
+</html>
